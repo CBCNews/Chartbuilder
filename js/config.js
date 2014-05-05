@@ -16,16 +16,16 @@ var defaultChartConfig = {
 	bargridLabelMargin: 10,         // the horizontal space between a bargrid bar and it's label
 	bargridBarThickness: 20,        // thickness of the bars in a bargrid
 	xAxisMargin: 10,                // the vertical space between the plot area and the x axis
-	footerMargin: 10,                // the vertical space between the bottom of the bounding box and the meta information
+	footerMargin: 10,               // the vertical space between the bottom of the bounding box and the meta information
 	legendLabelSpacingX: 5,         // the horizontal space between legend items
 	legendLabelSpacingY: 40,        // the vertical space between legend items
 	columnGap: 2,                   // the horizontal space between two columns that have the same x-axis value
-	axisBarGap: 5,                  // the horizontal space between a vertical axis and an adjacent bar
-	maxColumnWidth: 10,             // the maximum width of a column as a percent of the available chart width
+	axisBarGap: 0,                  // the horizontal space between a vertical axis and an adjacent bar
+	maxColumnWidth: 20,             // the maximum width of a column as a percent of the available chart width
 	primaryAxisPosition: "right",   // the first axis will be rendered on this side, "right" or "left" only
 	legend: true,                   // whether or not there should be a legend
-	title: "Visits by Spaniards to UK, 2012, in millions",         // the chart title
-	titleBottomMargin: 10,           // the vertical space between the title and the next element (sometimes a legend, sometimes an axis)
+	title: "Apples and Oranges",  	// the chart title
+	titleBottomMargin: 10,          // the vertical space between the title and the next element (sometimes a legend, sometimes an axis)
 	bargridLabelBottomMargin: 5,    // the space between the bargrid series label and the top most bar
 	colors: [
 		'#125278', '#A0D2F0', '#1E91B4', '#646464', '#C3C3C3', '#E1191E',
@@ -35,10 +35,10 @@ var defaultChartConfig = {
 		'#D0DCE4', '#ECF6FC', '#D2E9F0', '#E0E0E0', '#F3F3F3', '#F9D1D2'
 	],
 	padding :{
-		top: 10,
+		top: 5,
 		bottom: 70,
 		left: 20,
-		right: 20
+		right: 60
 	},
 	xAxis: {
 		domain: [0,100],

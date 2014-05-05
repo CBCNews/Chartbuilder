@@ -814,6 +814,7 @@ function Gneiss(config)
 					.attr("class","axis yAxis")
 					.attr("id",i == 0 ? "rightAxis" : "leftAxis" )
 					.attr("transform",i == 0 ? "translate("+g.padding().left+",0)" : "translate("+( g.width()-g.padding().right)+",0)" )
+                    //.attr("transform",i == 0 ? "translate(40,0)" : "translate(10,0)" )
 					.call(curAxis.axis);
 			}
 			else {
@@ -998,10 +999,11 @@ function Gneiss(config)
 				//store the text element of the axisItem
 				//align the text right position it on top of the line
 				axisItem.text = d3.select(this).select("text")
-					.attr("text-anchor",i == 0 ? "end" : "start")
+					// .attr("text-anchor",i == 0 ? "end" : "start")
+                    .attr("text-anchor",i == 0 ? "start" : "end")
 					.attr("fill",i==0 ? "#666666" : g.yAxis()[i].color)
-					.attr("x",function(){var elemx = Number(d3.select(this).attr("x")); return i == 0 ? elemx-3 : elemx+3; }) //CHANGE - MAGIC NUMBER (maybe?)
-					.attr("y",-9);
+					.attr("x",function(){var elemx = Number(d3.select(this).attr("x")); return i == 0 ? elemx+10 : elemx+10; }) //CHANGE - MAGIC NUMBER (maybe?)
+					.attr("y",0);
 			});
 	};
 
@@ -1396,7 +1398,6 @@ function Gneiss(config)
 				var bargridLabel = columnGroups.selectAll("text.bargridLabel")
 					.data(function(d,i){return [d]})
 					.text(function(d,i){return d.name})
-
 
 				bargridLabel.enter()
 						.append("text")
