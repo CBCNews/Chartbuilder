@@ -14,6 +14,19 @@ label,
 	font-family: Arial, sans-serif;
 }
 
+#chartContainer {
+    width: 620px;
+    height: 350px;
+    border: 1px solid #c3c3c3;
+}
+
+#seriesContainer {
+    background: #eee;
+}
+
+#rightAxis {
+    background: #ccc;
+}
 
 svg .axis text,
 svg .legendItem text,
@@ -23,6 +36,8 @@ svg text.bargridLabel,
 #titleLine  {
 	font-family: Arial, sans-serif !important;
 }
+
+
 
 #titleLine  {
     font-size: 20px;
@@ -41,7 +56,7 @@ svg text.metaText {
 
 div.colorPicker-palette,
 #colorPicker_palette-2 {
-    width: 135px !important;
+    width: 170px !important;
 }
 
 text.bargridLabel,
