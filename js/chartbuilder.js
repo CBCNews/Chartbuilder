@@ -684,15 +684,17 @@ ChartBuilder = {
 	}
 }
 
+
 // Create default config for chartbuilder
 ChartBuilder.getDefaultConfig = function() {
   var chartConfig = {};
 
-  chartConfig.colors     = colourPalette;
-  chartConfig.creditline = "Made with Chartbuilder";
+  chartConfig.colors        = colourPalette
+  chartConfig.creditline    = creditLine;
 
   return chartConfig;
 }
+
 
 // Starts applicatoin given config object
 ChartBuilder.start = function(config) {

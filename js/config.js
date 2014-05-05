@@ -1,10 +1,11 @@
+
 var colourPalette = [
-						'125278', '417593', '7197AE', 'A0BAC9', 'D0DCE4',
-						'1E91B4', '4BA7C3', '78BDD2', 'A5D3E1', 'D2E9F0',
-						'A0D2F0', 'B3DBF3', 'C6E4F6', 'D9EDF9', 'ECF6FC',
-						'E1191E', 'E7474B', 'ED7578', 'F3A3A5', 'F9D1D2',
-						'646464', '838383', 'A2A2A2', 'C1C1C1', 'E0E0E0',
-						'C3C3C3', 'CFCFCF', 'DBDBDB', 'E7E7E7', 'F3F3F3'
+                        '#125278', '#417593', '#7197AE', '#A0BAC9', '#D0DCE4',
+                        '#1E91B4', '#4BA7C3', '#78BDD2', '#A5D3E1', '#D2E9F0',
+                        '#A0D2F0', '#B3DBF3', '#C6E4F6', '#D9EDF9', '#ECF6FC',
+                        '#E1191E', '#E7474B', '#ED7578', '#F3A3A5', '#F9D1D2',
+                        '#646464', '#838383', '#A2A2A2', '#C1C1C1', '#E0E0E0',
+                        '#C3C3C3', '#CFCFCF', '#DBDBDB', '#E7E7E7', '#F3F3F3'
 					];
 var creditLine = 'CBC News | Made with Chartbuilder';
 
