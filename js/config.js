@@ -25,7 +25,7 @@ var defaultChartConfig = {
     maxColumnWidth: 10,             // the maximum width of a column as a percent of the available chart width  primaryAxisPosition: "right", // the first axis will be rendered on this side, "right" or "left" only
     primaryAxisPosition: "right",   // the first axis will be rendered on this side, "right" or "left" only
     legend: true,                   // whether or not there should be a legend
-    title: "",                      // the chart title
+    title: "A chart title",                      // the chart title
     titleBottomMargin: 5,           // the vertical space between the title and the next element (sometimes a legend, sometimes an axis)
     bargridLabelBottomMargin: 5,    // the space between the bargrid series label and the top most bar
     colors: [
@@ -37,7 +37,7 @@ var defaultChartConfig = {
                 '#C3C3C3', '#CFCFCF', '#DBDBDB', '#E7E7E7', '#F3F3F3'
         ],
     padding :{
-        top: 5,
+        top: 0,
         bottom: 50,
         left: 20,
         right: 20
