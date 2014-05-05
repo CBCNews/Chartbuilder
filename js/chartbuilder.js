@@ -561,7 +561,6 @@ ChartBuilder = {
 		});
 		d3.selectAll("text.legendLabel").call(legendLabelDrag);
 
-
 	},
 	getAllInputData: function() {
 		var d = {}, $el;
