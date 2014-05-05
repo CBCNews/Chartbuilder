@@ -20,84 +20,8 @@ Date.setLocale('en');
 
 //A default configuration
 //Should change to more d3esque methods e.g. http://bost.ocks.org/mike/chart/
-Gneiss.defaultGneissChartConfig = {
-	container: "#chartContainer", //css id of target chart container
-	editable: true, // reserved for enabling or dissabling on chart editing
-	lineDotsThreshold: 15, //line charts will have dots on points until a series has this number of points
-	bargridLabelMargin: 4, //the horizontal space between a bargrid bar and it's label
-	bargridBarThickness: 20, //thickness of the bars in a bargrid
-	xAxisMargin: 8, //the vertical space between the plot area and the x axis
-	footerMargin: 4, //the vertical space between the bottom of the bounding box and the meta information
-	legendLabelSpacingX: 5, //the horizontal space between legend items
-	legendLabelSpacingY: 4, //the vertical space between legend items
-	columnGap: 1, //the horizontal space between two columns that have the same x-axis value
-	axisBarGap: 5, //the horizontal space between a vertical axis and an adjacent bar
-	maxColumnWidth: 7.5, // the maximum width of a column as a percent of the available chart width	primaryAxisPosition: "right", // the first axis will be rendered on this side, "right" or "left" only
-	primaryAxisPosition: "right", // the first axis will be rendered on this side, "right" or "left" only
-	legend: true, // whether or not there should be a legend
-	title: "", // the chart title
-	titleBottomMargin: 5, // the vertical space between the title and the next element (sometimes a legend, sometimes an axis)
-	bargridLabelBottomMargin: 5, //the space between the bargrid series label and the top most bar
+Gneiss.defaultGneissChartConfig = defaultChartConfig;
 
-	padding :{
-		top: 30,
-		bottom: 50,
-		left: 10,
-		right: 10
-	},
-	xAxis: {
-		domain: [0,100],
-		prefix: "",
-		suffix: "",
-		type: "linear",
-		formatter: null,
-		mixed: true,
-		ticks: 5
-	},
-	yAxis: [
-		{
-			domain: [null,null],
-			tickValues: null,
-			prefix: {
-				value: "",
-				use: "top" //can be "top" "all" "positive" or "negative"
-			},
-			suffix: {
-				value: "",
-				use: "top"
-			},
-			ticks: 4,
-			formatter: null,
-			color: null
-		}
-	],
-	series: [
-		{
-			name: "apples",
-			data: [5.5,10.2,6.1,3.8],
-			source: "Some Org",
-			type: "line",
-			axis: 0,
-			color: null
-		},
-		{
-			name: "oranges",
-			data: [23,10,13,7],
-			source: "Some Org",
-			type: "line",
-			axis: 0,
-			color: null
-		}
-	],
-	xAxisRef: [
-		{
-			name: "names",
-			data: ["juicyness","color","flavor","travelability"]
-		}
-	],
-	sourceline: "",
-	creditline: "CBC News | Made with Chartbuilder"
-};
 
 Gneiss.dateParsers = {
   "mmddyyyy": function(d) { return [d.getMonth() + 1, d.getDate(), d.getFullYear()].join("/"); },

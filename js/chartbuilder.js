@@ -689,8 +689,7 @@ ChartBuilder = {
 ChartBuilder.getDefaultConfig = function() {
   var chartConfig = {};
 
-  chartConfig.colors        = colourPalette
-  chartConfig.creditline    = creditLine;
+  chartConfig.creditline = creditLine;
 
   return chartConfig;
 }
