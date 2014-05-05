@@ -12,16 +12,19 @@
 
 		<!-- favicon updates through js -->
 		<link id="favicon" rel="shortcut icon" type="image/png" href="" />
-		
+
 		<!-- Libraries CSS -->
 		<link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css" type="text/css" media="screen" charset="utf-8">
 		<link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css" type="text/css" media="screen" charset="utf-8">
 		<link rel="stylesheet" href="bower_components/really-simple-color-picker/colorPicker.css" type="text/css" media="screen" charset="utf-8">
-		
+
 		<!-- Chartbuilder CSS -->
 		<link rel="stylesheet" href="css/chartbuilder.css" type="text/css" media="screen" charset="utf-8">
 		<link rel="stylesheet" href="css/gneisschart.css" type="text/css" media="screen" charset="utf-8">
 		<link rel="stylesheet" href="css/colorPicker.css" type="text/css" media="screen" charset="utf-8">
+
+		<link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" charset="utf-8">
+
 	</head>
 	<body>
 		<!-- Add your site or application content here -->
@@ -30,17 +33,43 @@
 			  <div class="cbInner">
   				<div id="staticContainer">
   					<div id="chartContainer"></div>
-  
-  					<canvas id="canvas" width="1200px" height="676px"></canvas> 
-  					<canvas id="favicanvas" width="16px" height="16px"></canvas> 
+
+					  <div id="instructions">
+					    <h3>Charting time Series Data</h3>
+					    <ol>
+					        <li>Find some time series data (<a href="https://docs.google.com/a/cbc.ca/spreadsheet/ccc?key=0AtrPfe-ScVhJdGg0a2hKZU1JaWZ4ZGMxY3NKbWozYUE#gid=0" target="new">here</a>)</li>
+					        <li>Make sure the first column is your dates, and the heading on the first column is "date"</li>
+					        <li>Copy and paste into chart builder</li>
+					    </ol>
+					    <h3>Charting ordinal series data</h3>
+					    <ol>
+					        <li>Find some ordinal series data (<a href="https://docs.google.com/a/cbc.ca/spreadsheet/ccc?key=0AtrPfe-ScVhJdDZrODFnM3Q1TTlfSHA2Z3lrSjJrUmc#gid=0" target="new">here</a>)</li>
+					        <li>Make sure the first column are your categories, and the heading on the first column isn't "date"</li>
+					        <li>Copy and paste into chartbuilder</li>
+					    </ol>
+
+					    <h3>Finishing up</h3>
+					    <ul>
+					      <li>Pick your series types</li>
+					      <li>Set a title</li>
+					      <li>Set your units using the axis prefix and suffix field</li>
+					      <li>Adjust your max and min (if you so choose)</li>
+					      <li>Add a credit line and/or a source line</li>
+					      <li>Click create chart</li>
+					      <li>Select to download an svg or png</li>
+					    </ul>
+					  </div>
+
+  					<canvas id="canvas" width="1200px" height="676px"></canvas>
+  					<canvas id="favicanvas" width="16px" height="16px"></canvas>
   				</div>
 			  </div>
-      </div>
+            </div>
 
 			<div id="rightColumn" class="column">
 			  <div class="cbInner">
 			    <h1>ChartBuilder</h1>
-			  
+
   				<div id="chartOptions" class="interfaceCol">
              <div id="datainput">
              	<div class="inputGroup">
@@ -64,12 +93,12 @@
               <h2>2. Series Options</h2>
               <div id="seriesItems"></div>
             </div>
-  					
+
   					<div class="optionBlock">
     					<h2>3. Chart Options</h2>
     						<div class="optionGroup"><label for="chart_title">Title</label><input type="text" name="chart_title" value="" id="chart_title"></div>
-    						<div class="optionGroup"><label for="credit">Credit</label><input id="creditLine" type="text" name="credit" value="Made with Chartbuilder"></div>
-    						<div class="optionGroup"><label for="source">Source</label><input id="sourceLine" type="text" name="source" value="Data: ">
+    						<div class="optionGroup"><label for="credit">Credit</label><input id="creditLine" type="text" name="credit" value="Credit"></div>
+    						<div class="optionGroup"><label for="source">Source</label><input id="sourceLine" type="text" name="Source" value="Data: ">
     						<cite>Something like "Data: Bureau of Labor Statistics" or "Data compiled by Factset"</cite></div>
     				</div>
     				<div class="optionBlock">
@@ -138,14 +167,14 @@
                 <p>Create Image of Chart</p>
               </div>
               <div id="downloadLinksDiv" class="downloadLinks hide">
-                <a download="new_chart.png" id="downloadImageLink" class="downloadLink" href="#" target="_blank">Download&nbsp;Image&nbsp;of&nbsp;Chart</a> or 
+                <a download="new_chart.png" id="downloadImageLink" class="downloadLink" href="#" target="_blank">Download&nbsp;Image&nbsp;of&nbsp;Chart</a> or
                 <a download="new_chart.svg" id="downloadSVGLink" class="downloadLink" href="#" target="_blank">Download&nbsp;SVG&nbsp;of&nbsp;Chart</a>
               </div>
             </div>
             <div class="optionBlock full">
               <h4>5. Copy the HTML table of your data (if you want)</h4>
               <textarea  class="input-box"  id="table-html" type="text" rows="10"></textarea>
-              
+
               <div class="previousCharts hide">
                 <div class="optionGroup"><label for="previous_charts">Previously Created Charts</label>
                   <select name="previous_charts" id="previous_charts"></select>
@@ -154,9 +183,9 @@
             </div>
             <div class="clearfix"></div>
   				</div>
-  				
+
           <div id="currentSeries" class="interfaceCol"></div>
-  			</div>			
+  			</div>
 			</div>
       <div id="blankColumn" class="column"></div>
       <div class="clearfix"></div>
@@ -170,33 +199,29 @@
 		<script src="bower_components/rgbcolor/index.js" charset="utf-8"></script>
 		<script src="bower_components/jquery-csv/index.js" charset="utf-8"></script>
 		<script src="bower_components/really-simple-color-picker/jquery.colorPicker.min.js" charset="utf-8"></script>
-		<script src="bower_components/webfontloader/target/webfont.js" type="text/javascript" charset="utf-8"></script>
-		
-		
-		
+
+        <!--
+            script src="bower_components/webfontloader/target/webfont.js" type="text/javascript" charset="utf-8"></script
+        -->
+
 		<!-- Custom libraries JS -->
 		<script src="js/custom_components/sugar-1.3.9-custom.min.js" charset="utf-8"></script>
-		
+
 		<!-- Chartbuilder JS -->
+
+        <script src="js/config.js"></script>
+
 		<script src="js/gneisschart.js" charset="utf-8"></script>
 		<script src="js/chartbuilder.js"></script>
 
 		<script src="js/vendor/canvg.v1.3.js"></script>
 		<script src="js/vendor/rgbcolor.js" charset="utf-8"></script>
-		
-		<script type="text/javascript">
 
-		//This loads the webfonts and starts Chartbuilder once they're present
-		WebFont.load({
-			custom: {
-				families: ["Cutive"]
-			},
-		    active: function(name) {
-		        $(document).ready(function() {
-		            ChartBuilder.start();
-		        });
-		    }
-		});
+		<script type="text/javascript">
+    		//This loads the webfonts and starts Chartbuilder once they're present
+            $(document).ready(function() {
+                ChartBuilder.start();
+            });
 		</script>
 	</body>
 </html>

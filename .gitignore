@@ -2,3 +2,6 @@
 config/quartz_config.js
 config/defenseOne_config.js
 d1.html
+*.sublime-project
+
+*.sublime-workspace

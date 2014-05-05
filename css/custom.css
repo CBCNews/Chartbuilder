@@ -1,0 +1,48 @@
+/**
+ * Custom CSS for ChartBuilder
+ */
+
+input,
+textarea,
+select,
+label,
+#datainput textarea,
+#datainput table,
+.updateButton p {
+	font-family: Arial, sans-serif;
+}
+
+
+svg .axis text,
+svg .legendItem text,
+svg text.metaText,
+svg text.barLabel,
+svg text.bargridLabel,
+#titleLine  {
+	font-family: Arial, sans-serif !important;
+}
+
+#titleLine  {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:  #000000;
+    padding-bottom: 10px;
+}
+
+svg text.metaText {
+    font-size:  11px;
+    fill:  #999999;
+}
+
+
+
+div.colorPicker-palette,
+#colorPicker_palette-2 {
+    width: 135px !important;
+}
+
+text.bargridLabel,
+text.legendLabel {
+    color: #000 !important;
+}
