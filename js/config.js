@@ -12,7 +12,7 @@ var creditLine = 'CBC News | Made with Chartbuilder';
 var defaultChartConfig = {
 	container: "#chartContainer",   // css id of target chart container
 	editable: false,                // reserved for enabling or dissabling on chart editing
-	lineDotsThreshold: 15,          // line charts will have dots on points until a series has this number of points
+	lineDotsThreshold: 0,           // line charts will have dots on points until a series has this number of points
 	bargridLabelMargin: 10,         // the horizontal space between a bargrid bar and it's label
 	bargridBarThickness: 20,        // thickness of the bars in a bargrid
 	xAxisMargin: 10,                // the vertical space between the plot area and the x axis
@@ -24,7 +24,7 @@ var defaultChartConfig = {
 	maxColumnWidth: 20,             // the maximum width of a column as a percent of the available chart width
 	primaryAxisPosition: "right",   // the first axis will be rendered on this side, "right" or "left" only
 	legend: true,                   // whether or not there should be a legend
-	title: "Apples and Oranges",  	// the chart title
+	title: "Travellers to Canada by country of origin (2012)",  	// the chart title
 	titleBottomMargin: 10,          // the vertical space between the title and the next element (sometimes a legend, sometimes an axis)
 	bargridLabelBottomMargin: 5,    // the space between the bargrid series label and the top most bar
 	colors: [
@@ -54,7 +54,7 @@ var defaultChartConfig = {
 			domain: [0,25],
 			tickValues: null,
 			prefix: {
-				value: "",
+				value: " ",
 				use: "top" //can be "top" "all" "positive" or "negative"
 			},
 			suffix: {
@@ -67,30 +67,30 @@ var defaultChartConfig = {
 		}
 	],
 	series: [
+        {
+            name: "Nights",
+            data: [ 50849, 8324, 7026, 4802, 8137 ],
+            source: "Some Org",
+            type: "line",
+            axis: 0,
+            color: '#125278'
+        },
 		{
-			name: "apples",
-			data: [5.5,10.2,6.1,3.8],
+			name: "Trips",
+			data: [ 11887, 597, 423, 277, 273 ],
 			source: "Some Org",
 			type: "line",
 			axis: 0,
 			color: '#A0D2F0'
-		},
-		{
-			name: "oranges",
-			data: [23,10,13,7],
-			source: "Some Org",
-			type: "line",
-			axis: 0,
-			color: '#125278'
 		}
 	],
 	xAxisRef: [
 		{
 			name: "names",
-			data: ["Juicyness","Color","Flavor","Travelability"]
+			data: [ "United States", "United Kingdom ", "France ", "Germany", "Mainland China "  ]
 		}
 	],
-	sourceline: "",
+	sourceline: " Source: Statistics Canada ",
 	creditline: "CBC News | Made with Chartbuilder"
 };
 

@@ -616,7 +616,7 @@ function Gneiss(config)
 			// the extents are determined only by the values in the series charted
 			// against the axis in question. The right y-axis extents will be
 			// dependent only on series graphed against the right y-axis.
-			var useLowestValueInAllSeries = false;
+			var useLowestValueInAllSeries = true;
 
 			if(y[i]) {
 				calculatedDomain = Gneiss.helper.multiextent(g.series(), function(a) {
