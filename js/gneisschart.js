@@ -547,7 +547,7 @@ function Gneiss(config)
 
 		g.sourceElement(g.footerElement().append("text")
 			.attr("text-anchor", "end")
-			.attr("x", g.width() - g.padding().right)
+			.attr("x", g.width() - g.padding().left)
 			.attr("class", "metaText")
 			.text(g.source()));
 
