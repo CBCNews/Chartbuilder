@@ -1,8 +1,9 @@
-/* 
-// Make sure to change the name of the font 
+/*
+// Make sure to change the name of the font
 // in the webfont.js loader in index.html
+@import url(http://fonts.googleapis.com/css?family=Cutive);
 */
-@import url(http://fonts.googleapis.com/css?family=Cutive); 
+
 
 svg {
 	font-size: 14px;
@@ -41,23 +42,23 @@ svg .axis path {
 }
 
 svg .axis text {
-	font-family: 'Cutive',Helvetica, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 svg .legendItem text {
-	font-family: 'Cutive',Helvetica, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 svg text.metaText {
-	font-family: 'Cutive',Helvetica, sans-serif;
+	font-family: Arial, sans-serif;
 	font-size:  10px;
 	text-rendering:   optimizeLegibility;
 	fill:  #999999;
 }
 
-svg text.barLabel, 
+svg text.barLabel,
 svg text.bargridLabel {
-	font-family: 'Cutive',Helvetica, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 /*Default styling of series*/
@@ -73,8 +74,8 @@ svg .seriesScatter circle {
 	stroke:#fff;
 	stroke-width":1;
 }
-	
+
 #titleLine {
-	font-family: 'Cutive',Helvetica, sans-serif;
+	font-family: Arial, sans-serif;
 	fill: #666666;
 }

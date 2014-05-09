@@ -1,7 +1,5 @@
-
-
 /**
- * Custom CSS for ChartBuilder
+ * CBC Custom CSS for ChartBuilder
  */
 
 input,
@@ -15,20 +13,6 @@ label,
 }
 
 
-#chartContainer {
-    width: 620px;
-    height: 350px;
-    border: 1px solid #c3c3c3;
-}
-
-#seriesContainer {
-    background: #eee;
-}
-
-#rightAxis {
-    background: #ccc;
-}
-
 svg .axis text,
 svg .legendItem text,
 svg text.metaText,
@@ -37,13 +21,6 @@ svg text.bargridLabel,
 #titleLine  {
 	font-family: Arial, sans-serif !important;
 }
-
-svg .axis text {
-    font-size: 12px;
-    text-indent: -10px;
-    margin-left: -20px;
-}
-
 
 #titleLine  {
     font-size: 20px;
@@ -62,12 +39,10 @@ svg text.metaText {
 
 div.colorPicker-palette,
 #colorPicker_palette-2 {
-    width: 170px !important;
+    width: 135px !important;
 }
 
 text.bargridLabel,
 text.legendLabel {
     color: #000 !important;
 }
-
-

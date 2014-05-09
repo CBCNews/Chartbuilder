@@ -38,7 +38,7 @@ var defaultChartConfig = {
 		top: 5,
 		bottom: 70,
 		left: 20,
-		right: 60
+		right: 70
 	},
 	xAxis: {
 		domain: [0,100],

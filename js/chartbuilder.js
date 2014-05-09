@@ -776,11 +776,13 @@ ChartBuilder.start = function(config) {
   			ChartBuilder.curRaw = $(this).val()
 
   			if($("#right_axis_max").val().length == 0 && $("#right_axis_min").val().length == 0) {
-  					chart.yAxis()[0].domain = [null,null];
+  					// chart.yAxis()[0].domain = [null,null];
+                    chart.yAxis()[0].domain = [0,null];
   			}
 
   			if(chart.yAxis().length > 1 && $("#left_axis_max").val().length == 0 && $("#left_axis_min").val().length == 0) {
-  					chart.yAxis()[1].domain = [null,null];
+  					// chart.yAxis()[1].domain = [null,null];
+                    chart.yAxis()[1].domain = [0,null];
   			}
 
   			var csv = $("#csvInput").val();
